@@ -1,0 +1,150 @@
+body {
+    width: 100%;
+    font-family: 'Battambang';
+    background-color: whitesmoke;
+
+  }
+
+  .navbar {
+    margin: 1px;
+
+  }
+
+  .nav-item {
+
+    margin: 3px;
+  }
+
+  ul li a:hover {
+
+    background-color: #3498db;
+  }
+  
+  .middle {
+    /* position: absolute; */
+    /* top: 50%; */
+    text-align: center;
+    /* width: 100%; */
+  }
+
+  .sbutton {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #F5F5F5;
+    margin: 10px;
+    border-radius: 100%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #3498db;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  .sbutton i {
+    transform: translateY(-5%);
+    line-height: 25px;
+    font-size: 20px;
+    transition: 0.2s linear;
+  }
+
+  .sbutton:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+  }
+
+  .sbutton::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -100%;
+    top: 100%;
+
+  }
+
+  .sbutton:hover::before {
+    animation: aaa 0.10s 1;
+    top: 0%;
+    left: 0%;
+  }
+
+  @keyframes aaa {
+    0% {
+      left: -110%;
+      top: 90%;
+    }
+
+    50% {
+      left: 10%;
+      top: -30%;
+    }
+
+    100% {
+      left: -10%;
+      top: -10%;
+    }
+  }
+
+  .test {
+
+    margin-top: 3%;
+  }
+
+  /* BACK TO TOP BUTTON */
+  #back-to-top {
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+  }
+
+  #back-to-top:hover,
+  #back-to-top {
+    background-color: #3498db;
+    color: #F5F5F5;
+
+  }
+
+  #back-to-top:hover {
+    transform: scale(1.3);
+
+  }
+
+  @media(max-width: 992px) {
+    #back-to-top {
+      font-size: 22px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media(max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+
+    #back-to-top {
+      font-size: 18px;
+      width: 32px;
+      height: 32px;
+    }
+
+    footer {
+      text-align: center;
+    }
+  }
